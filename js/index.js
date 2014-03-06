@@ -61,16 +61,19 @@ var app = {
     },
     
     obtenerContactos: function() {
-        var options      = new ContactFindOptions();
-        options.filter   = "Bob";
-        options.multiple = true;
-        var fields       = ["displayName", "name"];
-        navigator.contacts.find(fields,
+        navigator.contacts.find
+        (
+            {
+                filter: "Carlos",
+                multiple: true
+            },
             function( imageURI ) {
                 alert('Found ' + contacts.length + ' contacts.');
             },
             function( message ) {
                 alert('onError!');
-            }, options);
+            }, 
+            ["name", "phoneNumbers", "emails"]
+        );
     }
 };
