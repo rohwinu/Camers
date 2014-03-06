@@ -59,4 +59,18 @@ var app = {
         destinationType: Camera.DestinationType.FILE_URI
       });
     }
+    
+    obtenerContactos: function() {
+        var options      = new ContactFindOptions();
+        options.filter   = "Bob";
+        options.multiple = true;
+        var fields       = ["displayName", "name"];
+        navigator.contacts.find(fields,
+            function( imageURI ) {
+                alert('Found ' + contacts.length + ' contacts.');
+            },
+            function( message ) {
+                alert('onError!');
+            }, options);
+    }
 };
