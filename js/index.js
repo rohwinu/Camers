@@ -60,7 +60,7 @@ var app = {
       });
     }
     
-    obtenerContactos: function() {
+    /*obtenerContactos: function() {
         var options      = new ContactFindOptions();
         options.filter   = "Bob";
         options.multiple = true;
@@ -72,5 +72,5 @@ var app = {
             function( message ) {
                 alert('onError!');
             }, options);
-    }
+    }*/
 };
