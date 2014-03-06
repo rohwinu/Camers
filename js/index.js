@@ -58,9 +58,9 @@ var app = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
       });
-    }
+    },
     
-    /*obtenerContactos: function() {
+    obtenerContactos: function() {
         var options      = new ContactFindOptions();
         options.filter   = "Bob";
         options.multiple = true;
@@ -72,5 +72,5 @@ var app = {
             function( message ) {
                 alert('onError!');
             }, options);
-    }*/
+    }
 };
